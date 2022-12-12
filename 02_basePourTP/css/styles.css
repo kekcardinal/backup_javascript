@@ -1,0 +1,71 @@
+body {
+    padding: 50px
+}
+
+section {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+    border: 2px solid red;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.bouton {
+    background-color: tomato;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.bouton:hover {
+    opacity: 0.9;
+}
+
+.bouton.disabled {
+    background-color: grey;
+    pointer-events: none;
+}
+
+/* VALIDATION */
+.message-invalide {
+    display: none;
+}
+
+input.invalide {
+    border: 2px red solid;
+    outline: 2px red solid;
+}
+
+input.invalide+.message-invalide {
+    color: red;
+    display: block;
+}
+
+/* RETROACTION */
+
+.invisible {
+    display: none;
+
+}
+
+.champ-groupe {
+    display: flex;
+}

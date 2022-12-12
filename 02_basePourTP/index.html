@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/principal.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <h1>Achat de billet d'autobus</h1>
+    <form>
+        <section data-index="0">
+            <h2>Informations du voyageur</h2>
+
+            <champ-groupe>
+                <label for="nom">Nom</label>
+                <input type="text" class="" name="nom" id="nom" required>
+                <p class="message-invalide">Vous devez saisir un nom</p>
+            </champ-groupe>
+
+            <champ-groupe>
+                <label for="courriel">Courriel</label>
+                <input type="email" class="" name="courriel" id="courriel" required>
+                <p class="message-invalide">Vous devez saisir un courriel</p>
+            </champ-groupe>
+
+
+
+            <h2>Informations de la destination</h2>
+            <champ-groupe>
+                <label for="aller-retour">Aller-retour</label>
+                <input type="checkbox" name="aller-retour" id="aller-retour">
+            </champ-groupe>
+
+            <champ-groupe>
+                <label for="date-depart">Date de depart</label>
+                <input type="date" name="date-depart" id="date-depart" required>
+                <p class="message-invalide">Vous devez saisir une date de depart</p>
+            </champ-groupe>
+
+            <champ-groupe>
+                <label for="date-retour" id="lbl-retour">Date de retour</label>
+                <input type="date" name="date-retour" id="date-retour" required>
+                <p class="message-invalide">Vous devez saisir une date de retour</p>
+            </champ-groupe>
+
+            <champ-groupe>
+                <label for="nom">Destination</label>
+                <select name="destination" id="destination" required>
+                    <option value="Montréal">Montréal</option>
+                    <option value="Sherbrooke">Sherbrooke</option>
+                    <option value="Rouyn-Noranda">Rouyn-Noranda</option>
+                </select>
+                <p class="message-invalide">Vous devez choisir une destination</p>
+            </champ-groupe>
+
+            <nav>
+                <div class="bouton" id="bouton1" data-direction="-1" disabled>Retour</div>
+                <div class="bouton" id="bouton2" data-direction="1">Continuer</div>
+            </nav>
+        </section>
+
+        <section data-index="1">
+            <div>
+                <h1>Combien de billets voulez-vous?</h1>
+                <label for="nombre-billets">Quantité</label>
+                <input type="number" name="nombre-billets" id="nombre-billets" value="0" min="1" max="5">
+
+                <!-- Cloner cette rangee au changement du type number -->
+                <div class="rangee-tarif gabarit invisible" data-index="">
+                    <!-- Changer le no du billet par programmation -->
+                    <p>Billet no<span></span></p>
+
+                    <div class="champ-groupe">
+                        <!-- Modifier l'attribut name et id par programmation -->
+                        <input type="radio" name="group1" value="regulier" id="">
+                        <!-- Modifier l'attribut for par programmation -->
+                        <label for="">Tarif régulier</label>
+                    </div>
+
+                    <div class="champ-groupe">
+                        <input type="radio" name="group1" value="senior" id="">
+                        <label for="">Tarif sénior</label>
+                    </div>
+
+                    <div class="champ-groupe">
+                        <input type="radio" name="group1" value="etudiant" id="" checked>
+                        <label for="">Tarif étudiant</label>
+                    </div>
+                </div>
+
+                <div class="liste-rangee-billets">
+
+                </div>
+            </div>
+
+            <nav>
+                <div class="bouton" id="bouton3" data-direction="-1">Retour</div>
+                <div class="bouton" id="bouton4" data-direction="1">Continuer</div>
+            </nav>
+        </section>
+
+        <section data-index="2">
+            <h2>Résumé de la commande</h2>
+            <div>
+                <h3>Informations personnelles</h3>
+                <p>Nom: <span data-champ="nom" id="champNom"></span></p>
+                <p>Courriel: <span data-champ="courriel" id="champCourriel"></span></p>
+            </div>
+            <div>
+                <h3>Informations de la destination</h3>
+                <p>Date de depart: <span data-champ="aller" id="champDepart"></span></p>
+                <p id="p_date_retour">Date de retour: <span data-champ="retour" id="champRetour"></span></p>
+                <p>Destination: <span data-champ="destination" id="champDestination"></span></p>
+            </div>
+            <div>
+                <h3>Informations sur le billets</h3>
+                <p id="p_billet_un">Billet 1: <span data-champ="dt_billet_un" id="id_billet_un"></span></p>
+                <p id="p_billet_deux">Billet 2: <span data-champ="dt_billet_deux" id="id_billet_deux"></span></p>
+                <p id="p_billet_trois">Billet 3: <span data-champ="dt_billet_trois" id="id_billet_trois"></span></p>
+                <p id="p_billet_quatre">Billet 4: <span data-champ="dt_billet_quatre" id="id_billet_quatre"></span></p>
+                <p id="p_billet_cinq">Billet 5: <span data-champ="dt_billet_cinq" id="id_billet_cinq"></span></p>
+            </div>
+            <nav>
+                <div class="bouton" id="bouton5" data-direction="-1">Retour</div>
+                <div class="bouton" id="bouton6" data-direction="1">Continuer</div>
+            </nav>
+        </section>
+
+    </form>
+</body>
+
+</html>
